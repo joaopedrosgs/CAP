@@ -1,10 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int pedidos_restantes=2, codigo;
+    int qtdade=0, codigo;
     double total=0;
-    do {
+
         scanf("%d", &codigo);
+        scanf("%d", &qtdade);
+
         switch (codigo) {
             case 1:
                 total = total + 4.00;
@@ -29,8 +31,9 @@ int main() {
             default:
                 break;
         }
-        pedidos_restantes = pedidos_restantes - 1;
-    } while (pedidos_restantes != 0);
+        total = total*qtdade;
+
+
 
 
       printf("Total: R$: %.2f", total);
